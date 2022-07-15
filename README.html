@@ -1,0 +1,55 @@
+# Trab_Fund.Info
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade_1</title>
+ 
+</head>
+<body>
+    <button onClick="jogo(jogo)">Clique aqui para jogar pedra-papel-tesoura</button>
+    <script>
+        function jogo(){
+            for (var mdt = 0; mdt < 3; mdt++) {
+                jogo=prompt("///////////////////ESCOLHA////////////////// \n 1 para pedra \n 2 para papel \n 3 para tesoura");
+                pc= Math.floor(Math.random() * 3 + 1);
+                pcw= 0;
+                jogow= 0;
+                if(jogo ==1 && pc== 2){
+                    alert("Você perdeu \n Você escolheu pedra e o computador papel \n Mais sorte na próxima!!!")
+                    pcw++
+                }else if(jogo ==2 && pc== 3){
+                    alert("Você perdeu \n Você escolheu papel e o computador tesoura \n Mais sorte na próxima!!!")
+                    pcw++
+                }else if(jogo ==3 && pc== 1){
+                    alert("Você perdeu \n Você escolheu tesoura e o computador pedra \n Mais sorte na próxima!!!")
+                    pcw++
+                }else if(jogo ==pc){
+                    alert("EMPATE \n Você e o computador escolheram o mesmo.")
+ 
+                } else if(jogo ==2 && pc== 1){
+                    alert("VOCÊ VENCEU \n Você escolheu papel e o computador pedra \n Parabéns!!!")
+                    jogow++
+                }else if(jogo ==3 && pc== 2){
+                    alert("VOCÊ VENCEU \n Você escolheu tesoura e o computador papel \n Parabéns!!!")
+                    jogow++
+                }else if(jogo ==1 && pc== 3){
+                    alert("VOCÊ VENCEU \n Você escolheu pedra e o computador tesoura \n Parabéns!!!")
+                    jogow++
+                } else if(jogo => 4 && jogo <= 0){
+                    alert("Valor inválido, utilize números de 1 até 3.")
+                    mdt=mdt-1;
+                }    
+            }
+            if(pcw > jogow){
+                alert("É uma pena mas você perdeu")
+            }else if(pcw < jogow){
+                alert("Parabéns, você venceu!!!")
+            }else{
+                alert("A partida acaba em empate, mais sorte na próxima")
+            }
+        }
+   
+    </script>
+</body>
